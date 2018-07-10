@@ -9,7 +9,7 @@ Framework lays great emphasis on flexibility in deciding how to organize and arc
 
 ### Features
 
-* Backward compatibility down to Android API 16 (not tested on earlier versions)
+* Backward compatibility down to Android API 19
 * Thread-safe API
 * __Kotlin__ code
 * __KTX__ support
