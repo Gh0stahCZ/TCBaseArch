@@ -26,4 +26,6 @@ class AnotherFragment : Fragment() {
     viewModel = ViewModelProviders.of(this).get(AnotherViewModel::class.java)
   }
 
+
+
 }

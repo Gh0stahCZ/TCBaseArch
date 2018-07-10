@@ -107,4 +107,7 @@ dependencies {
 
   androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
   androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+  implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+//  implementation 'androidx.core:core-ui:+'
+  implementation 'androidx.legacy:legacy-support-core-ui:1.0.0-beta01'
 }
