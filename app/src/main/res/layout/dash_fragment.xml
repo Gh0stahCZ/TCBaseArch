@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/nestedScrollView"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.dash.AnotherFragment"
+  tools:layout_editor_absoluteY="25dp"
+  android:fillViewport="true">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinatorLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/dash"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      >
+
+      <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:padding="16dp">
+
+          <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DashFragment"/>
+
+          <Button
+            android:id="@+id/message2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            />
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enabled"/>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/disabled_material_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="Label disabled"/>
+
+          <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:id="@+id/material_unelevated_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unelevated"/>
+
+          <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:id="@+id/material_text_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Text button"/>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_icon_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Icon button"
+            app:icon="@drawable/ic_apps_white_24dp"
+            app:iconPadding="8dp"/>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_icon_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Icon button"
+            app:icon="@drawable/ic_apps_white_24dp"
+            app:iconPadding="8dp"/>
+
+          <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_icon_button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Icon button"
+            app:icon="@drawable/ic_apps_white_24dp"
+            app:iconPadding="8dp"/>
+        </LinearLayout>
+      </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.core.widget.NestedScrollView>

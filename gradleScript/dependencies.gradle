@@ -1,0 +1,19 @@
+ext {
+
+  // Versions
+
+  buildToolsVersionVar = "28.0.0-rc1"
+
+  minSdkVersionVar = 19
+  compileSdkVersionVar = 28
+  targetSdkVersionVar = 28
+
+  retrofitVersion = "2.4.0"
+  daggerVersion = "2.16"
+
+  networkDependencies = [
+    retrofit      : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+    rxjava_adapter: "com.squareup.retrofit2:adapter-rxjava:${retrofitVersion}",
+    converter_gson: "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+  ]
+}
