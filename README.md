@@ -11,11 +11,9 @@ Framework lays great emphasis on flexibility in deciding how to organize and arc
 
 * Backward compatibility down to Android API 16 (not tested on earlier versions)
 * Thread-safe API
-
 * __Kotlin__ code
 * __KTX__ support
 * __AndroidX__ support
-
 * __Android Architecture Components__ support
 * __Android Jetpack__ support
 * __RxJava2__ support
