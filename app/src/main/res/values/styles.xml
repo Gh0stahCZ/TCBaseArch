@@ -287,7 +287,7 @@
   </style>
 
   <style name="Text.Title"
-         parent="Text.Huge.Bold">
+         parent="Text.Mega.Bold">
     <item name="android:textColor">@color/white</item>
   </style>
 

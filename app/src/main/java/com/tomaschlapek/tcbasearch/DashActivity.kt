@@ -1,7 +1,6 @@
 package com.tomaschlapek.tcbasearch
 
 import android.os.Bundle
-import android.text.TextUtils.replace
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.transaction
 import com.tomaschlapek.tcbasearch.ui.dash.AnotherFragment
@@ -9,6 +8,9 @@ import com.tomaschlapek.tcbasearch.ui.dash.DashFragment
 
 
 class DashActivity : AppCompatActivity() {
+
+//  @Inject
+//  lateinit var anotherViewModelFactory: AnotherViewModelFactory
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)

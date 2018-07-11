@@ -12,7 +12,8 @@
   <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/view_list"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    tools:listitem="@layout/view_item"/>
 
   <com.google.android.material.card.MaterialCardView
     android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:padding="16dp"
-      android:text="AnotherFrag"/>
+      android:text="AnotherFrag"
+      android:visibility="gone"/>
 
   </com.google.android.material.card.MaterialCardView>
 

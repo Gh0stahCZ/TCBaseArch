@@ -2,7 +2,6 @@ package com.tomaschlapek.tcbasearch.di.module
 
 import android.content.Context
 import com.google.gson.GsonBuilder
-import com.squareup.picasso.OkHttpDownloader
 import com.squareup.picasso.Picasso
 import com.tomaschlapek.tcbasearch.R
 import com.tomaschlapek.tcbasearch.util.CACHE_SIZE
@@ -15,7 +14,6 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
-import timber.log.Timber
 import javax.inject.Singleton
 
 @Module
@@ -58,10 +56,10 @@ class NetModule {
   @Singleton
   fun providePicasso(context: Context): Picasso {
 
-    return Picasso.Builder(context)
-      .downloader(OkHttpDownloader(context))
-      .listener { _, _, exception -> Timber.d("Exception " + exception.stackTrace) }
-      .build()
+    return Picasso.get()
+    //      .downloader(OkHttpDownloader(context))
+    //      .listener { _, _, exception -> Timber.d("Exception " + exception.stackTrace) }
+    //      .build()
   }
 
   @Provides

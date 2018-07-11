@@ -6,14 +6,11 @@ import android.app.Service
 import com.tomaschlapek.tcbasearch.di.component.AppComponent
 import com.tomaschlapek.tcbasearch.di.component.DaggerAppComponent
 import com.tomaschlapek.tcbasearch.widget.DebugTree
-import dagger.android.AndroidInjector
-import dagger.android.DispatchingAndroidInjector
-import dagger.android.HasActivityInjector
-import dagger.android.HasServiceInjector
+import dagger.android.*
 import timber.log.Timber
 import javax.inject.Inject
 
-class App : Application(), HasActivityInjector, HasServiceInjector {
+class App : Application(), HasActivityInjector, HasServiceInjector, HasFragmentInjector {
 
   /* Public Constants *****************************************************************************/
 
@@ -22,6 +19,10 @@ class App : Application(), HasActivityInjector, HasServiceInjector {
 
   @Inject
   lateinit var mServiceInjector: DispatchingAndroidInjector<Service>
+
+  // TODO Change to androidx fragment when library will be ready
+  @Inject
+  lateinit var mFragmentInjector: DispatchingAndroidInjector<android.app.Fragment>
 
   override fun onCreate() {
     super.onCreate()
@@ -49,6 +50,11 @@ class App : Application(), HasActivityInjector, HasServiceInjector {
 
   override fun serviceInjector(): AndroidInjector<Service> {
     return mServiceInjector
+  }
+
+  // TODO Change to androidx fragment when library will be ready
+  override fun fragmentInjector(): AndroidInjector<android.app.Fragment> {
+    return mFragmentInjector
   }
 
   companion object {

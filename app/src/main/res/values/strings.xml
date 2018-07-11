@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">TCBaseArch</string>
+  <string name="view_counter">%.1f / 5</string>
 </resources>

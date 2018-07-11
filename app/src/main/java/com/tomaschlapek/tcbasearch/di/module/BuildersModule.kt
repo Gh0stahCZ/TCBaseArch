@@ -10,4 +10,8 @@ abstract class BuildersModule {
   @ContributesAndroidInjector
   abstract fun contributeDashActivityInjector(): DashActivity
 
+  // TODO Uncomment when library will be ready for androidx fragment
+  //  @ContributesAndroidInjector
+  //  abstract fun contributeAnotherFragmentActivityInjector(): AnotherFragment
+
 }

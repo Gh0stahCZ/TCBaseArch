@@ -11,7 +11,8 @@
   <FrameLayout
     android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"/>
+    android:layout_height="match_parent"
+    android:layout_marginBottom="?android:attr/actionBarSize"/>
 
   <com.google.android.material.bottomappbar.BottomAppBar
     android:id="@+id/bottom_appbar"
@@ -28,7 +29,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom|center_horizontal"
-    android:src="@drawable/ic_apps_white_24dp"
+    app:srcCompat="@drawable/ic_apps_white_24dp"
     app:layout_anchor="@+id/bottom_appbar"/>
 
 
