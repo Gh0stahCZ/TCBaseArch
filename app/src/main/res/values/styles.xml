@@ -291,4 +291,9 @@
     <item name="android:textColor">@color/white</item>
   </style>
 
+  <style name="Text.SubTitle"
+         parent="Text.Large">
+    <item name="android:textColor">@color/white</item>
+  </style>
+
 </resources>

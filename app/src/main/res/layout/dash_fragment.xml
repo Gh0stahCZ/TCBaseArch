@@ -105,7 +105,6 @@
             app:iconPadding="8dp"/>
         </LinearLayout>
       </com.google.android.material.card.MaterialCardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
   </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </androidx.core.widget.NestedScrollView>

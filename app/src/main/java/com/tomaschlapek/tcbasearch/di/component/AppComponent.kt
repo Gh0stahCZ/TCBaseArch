@@ -13,7 +13,7 @@ import retrofit2.Retrofit
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(AndroidInjectionModule::class, AppModule::class,  NetModule::class, BuildersModule::class))
+@Component(modules = arrayOf(AndroidInjectionModule::class, AppModule::class, NetModule::class, BuildersModule::class))
 interface AppComponent : AndroidInjector<App> {
 
   fun provideContext(): Context
@@ -33,8 +33,9 @@ interface AppComponent : AndroidInjector<App> {
     fun build(): AppComponent
   }
 
+//  fun inject(fragment: Fragment)
+
   /*
-  void inject(BaseFragment activity);
   ToolbarHelper provideToolbarHelper();
   KRealmHelper provideRealmHelper();*/
 }

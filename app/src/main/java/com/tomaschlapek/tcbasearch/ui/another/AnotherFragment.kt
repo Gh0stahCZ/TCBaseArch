@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
+import com.tomaschlapek.tcbasearch.DashActivity
 import com.tomaschlapek.tcbasearch.R
 import com.tomaschlapek.tcbasearch.data.CustomItem
 import com.tomaschlapek.tcbasearch.ui.adapter.CustomViewAdapter
@@ -21,6 +22,9 @@ class AnotherFragment : Fragment() {
     fun newInstance() = AnotherFragment()
   }
 
+  //  @Inject
+  //  lateinit var anotherViewModelFactory: AnotherViewModelFactory
+
   private lateinit var customAdapter: CustomViewAdapter
 
   private lateinit var viewModel: AnotherViewModel
@@ -32,8 +36,8 @@ class AnotherFragment : Fragment() {
 
   override fun onActivityCreated(savedInstanceState: Bundle?) {
     super.onActivityCreated(savedInstanceState)
-    viewModel = ViewModelProviders.of(this).get(AnotherViewModel::class.java)
-    //    viewModel = ViewModelProviders.of(this, (activity as DashActivity).anotherViewModelFactory).get(AnotherViewModel::class.java!!)
+    //    viewModel = ViewModelProviders.of(this).get(AnotherViewModel::class.java)
+    viewModel = ViewModelProviders.of(this, (activity as DashActivity).anotherFragmentViewModelFactory).get(AnotherViewModel::class.java!!)
     init()
   }
 
@@ -45,15 +49,13 @@ class AnotherFragment : Fragment() {
     list.add(CustomItem("Hello World", "2018", "15.2.2018", 3.5f, 56, "http://image.tmdb.org/t/p/w500/mabuNsGJgRuCTuGqjFkWe1xdu19.jpg"))
     list.add(CustomItem("Rampage", "2019", "18.9.2019", 2.1f, 906, "http://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg"))
 
-    customAdapter = CustomViewAdapter(context!!, list)
+    customAdapter = CustomViewAdapter(context!!, list) {
+      (activity as DashActivity).openDetail(it)
+    }
 
     view_list.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
     view_list.addItemDecoration(SpaceItemDecor(48.dp))
     LinearSnapHelper().attachToRecyclerView(view_list)
     view_list.adapter = customAdapter
-
-
   }
-
-
 }
