@@ -1,3 +1,4 @@
+# *** UNDER CONSTRUCTION ***
 # TCBaseArch
 Android Base Architecture
 
