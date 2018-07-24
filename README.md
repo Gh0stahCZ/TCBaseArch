@@ -1,4 +1,4 @@
-# *** UNDER CONSTRUCTION ***
+# \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \]
 # TCBaseArch
 Android Base Architecture
 
